@@ -62,22 +62,22 @@ const Data = () => {
     const formatTimestamp = (timestamp) => {
         // Convert BigInt to Number if necessary
         const ts = typeof timestamp === "bigint" ? Number(timestamp) : timestamp;
-    
+
         const date = new Date(ts * 1000); // Convert seconds to milliseconds
-    
+
         // Extract date components
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
         const year = String(date.getFullYear()).slice(-2); // Get last 2 digits of the year
-    
+
         // Extract time components
         const hours = String(date.getHours()).padStart(2, '0');
         const minutes = String(date.getMinutes()).padStart(2, '0');
-    
+
         // Combine date and time
         return `${day}/${month}/${year} ${hours}:${minutes}`;
     };
-    
+
 
     const enterLottery = async () => {
         try {
@@ -129,7 +129,7 @@ const Data = () => {
     useEffect(() => {
         connectToMetaMask();
         fetchLotteryData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
@@ -140,6 +140,7 @@ const Data = () => {
                 <p className="text-justify w-[80vw] lg:w-[90vw]">
                     This lottery contract provides a secure and fair platform for participants to enter raffles and potentially win a prize. Players can join by purchasing a ticket for 0.01 ETH, with their entries recorded as long as the raffle is open. Sponsors can also contribute to the prize pool by donating Ether, with their names acknowledged in the contract. When conditions are met, the contract owner requests a secure random number from Chainlink VRF to fairly select a winner. The chosen participant receives the entire prize pool, and the raffle resets for a new round. This process ensures transparency, security, and an unbiased winner selection.
                 </p>
+                <p className='font-bold text-xl'>ONLY USE SEPOLIA ETH. ANY OTHER NETWORK WILL RESULT IN LOSS OF TESTNET TOKENS</p>
             </section>
 
             <main className="mt-1 p-4 text-2xl">
