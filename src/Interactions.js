@@ -155,18 +155,18 @@ const Interactions = () => {
                 <form onSubmit={getreqStatus} className='flex flex-col w-[70vw] border px-8 p-4 rounded shadow'>
                     <label className='text-lg my-1 font-semibold'>Request Status</label>
                     <input value={reqId} onChange={(e) => setreqId(e.target.value)} type='text' placeholder='Put in the request ID' className=' rounded py-2 px-4  outline-none border border-black'></input>
-                    <div>
+                    <div className='w-full text-center break-words'>
                         {requestStatus && (
-                            <div className='flex flex-col items-center justify-center flex-wrap text-center'>
+                            <div className='flex flex-col items-center justify-center break-words text-center'>
                                 <h1 className='font-semibold'>{requestStatus ? <span>Request Completed</span> : <span>Request in Progress</span>}</h1>
-                                <h1 className='font-semibold mt-2'>Random Words: {requestStatus ? <span></span> : <span></span>}</h1>
+                                <h1 className='font-semibold mt-2 break-words'>Random Words</h1>
 
                                 {requestStatus.randomWords &&
                                     Array.isArray(requestStatus.randomWords) &&
                                     requestStatus.randomWords.length > 0 ? (
                                     <ul>
                                         {requestStatus.randomWords.map((word, index) => (
-                                            <li key={index}>{word.toString()}</li>
+                                            <h1 className='mt-2 w-[60vw] text-center break-words' key={index}>{word.toString()}</h1>
                                         ))}
                                     </ul>
                                 ) : (
