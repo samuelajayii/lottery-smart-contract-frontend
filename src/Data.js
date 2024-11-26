@@ -140,7 +140,7 @@ const Data = () => {
                 <p className="text-justify w-[80vw] lg:w-[90vw]">
                     This lottery contract provides a secure and fair platform for participants to enter raffles and potentially win a prize. Players can join by purchasing a ticket for 0.01 ETH, with their entries recorded as long as the raffle is open. Sponsors can also contribute to the prize pool by donating Ether, with their names acknowledged in the contract. When conditions are met, the contract owner requests a secure random number from Chainlink VRF to fairly select a winner. The chosen participant receives the entire prize pool, and the raffle resets for a new round. This process ensures transparency, security, and an unbiased winner selection.
                 </p>
-                <p className='font-bold text-xl'>ONLY USE SEPOLIA ETH. ANY OTHER NETWORK WILL RESULT IN LOSS OF TESTNET TOKENS</p>
+                <p className='font-bold text-xl text-center'>ONLY USE SEPOLIA ETH. ANY OTHER NETWORK WILL RESULT IN LOSS OF TESTNET TOKENS</p>
             </section>
 
             <main className="mt-1 p-4 text-2xl">
